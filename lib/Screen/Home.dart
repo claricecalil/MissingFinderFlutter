@@ -2,21 +2,24 @@ import 'package:flutter/material.dart';
 //import 'package:missing_finder/Screen/Profile.dart';
 //import 'package:missing_finder/routes/app_routes.dart';
 
-
-
 class HomePage extends StatelessWidget {
- 
   Future<void> goToInstrucoesFoto(BuildContext context) async {
     Navigator.of(context).pushNamed(
       '/instrucoes_foto',
     );
   }
 
- Future<void> goToProfile(BuildContext context) async {
+  Future<void> goToProfile(BuildContext context) async {
     Navigator.of(context).pushNamed(
       '/profile',
     );
-  }  
+  }
+
+    Future<void> goToChecaAnuncio(BuildContext context) async {
+    Navigator.of(context).pushNamed(
+      '/checa_anuncio',
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,18 +30,31 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      
+
+      // BODY => GRID COM AS FOTOS
       body: GridView.count(
         crossAxisCount: 2, //Grid com 2 colunas
-        children: List.generate(100, (index) {
-          return Center(
-            child: Image.asset(
-              'assets/imagens/katyperry_similaridades.jpg',
+        children: List.generate(10, (index) {
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+          //return Center(
+            child: new InkResponse(
+              child: (
+                Image.asset('assets/imagens/katyperry_similaridades.jpg', 
+                width: 500, height: 500,fit: BoxFit.cover)
+              ),
+              onTap: () => goToChecaAnuncio(context),
             ),
-            //title: Text('Katheryn, 25 - San Francisco, CA'),
+
+            //child: Image.network("https://robohash.org/$index"),
+            // LINK QUE VEM É SIMILAR A ISSO: 
+            //child: Image.network('https://mantovanellos-bucket.s3-sa-east-1.amazonaws.com/found/$index'),
+                       
           );
         }),
       ),
+
+      // BOTTOM BAR
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: Row(

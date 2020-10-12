@@ -10,9 +10,9 @@ class TirarFoto extends StatefulWidget {
 class _TirarFotoState extends State<TirarFoto> {
   File imageFile;
 
-  Future<void> goToAddAnuncio(BuildContext context) async {
+  Future<void> goToSimilaridades(BuildContext context) async {
     Navigator.of(context).pushNamed(
-      '/add_anuncio',
+      '/similaridades',
     );
   }
 
@@ -89,7 +89,7 @@ class _TirarFotoState extends State<TirarFoto> {
               icon: Icon(Icons.camera_alt_rounded, color: Colors.white),
             ),
             IconButton(
-              onPressed: () => goToAddAnuncio(context),
+              onPressed: () => goToSimilaridades(context),
               icon: Icon(Icons.arrow_forward_sharp, color: Colors.white),
             ),
           ],
