@@ -81,16 +81,16 @@ class _TirarFotoState extends State<TirarFoto> {
               onPressed: () =>
                   goToAbrirGaleria(context), //_abrirGaleria(context),
               icon:
-                  Icon(Icons.picture_in_picture_outlined, color: Colors.white),
+                  Icon(Icons.photo, color: Colors.white, size: 30),
             ),
             IconButton(
               onPressed: () =>
                   goToAbrirCamera(context), //_abrirCamera(context),
-              icon: Icon(Icons.camera_alt_rounded, color: Colors.white),
+              icon: Icon(Icons.camera_alt_rounded, color: Colors.red, size: 30),
             ),
             IconButton(
               onPressed: () => goToSimilaridades(context),
-              icon: Icon(Icons.arrow_forward_sharp, color: Colors.white),
+              icon: Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 30),
             ),
           ],
         ),

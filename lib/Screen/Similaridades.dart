@@ -14,18 +14,23 @@ class Similaridades extends StatelessWidget {
         title: Text('Missing Finder'),
       ),
 
+      // Bottom Bar
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.person, color: Colors.white),
-            ),
-            IconButton(
+            FlatButton(
+              child: Text(
+                'Não encontrou?',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              color: Colors.blue,
+              textColor: Colors.white,
               onPressed: () => goToAddAnuncio(context),
-              icon: Icon(Icons.arrow_forward_sharp, color: Colors.white),
             ),
           ],
         ),

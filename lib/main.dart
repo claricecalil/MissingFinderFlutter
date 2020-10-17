@@ -17,7 +17,7 @@ void main() {
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
     routes: {
-      //AppRoutes.HOME: (context) => HomePage(),
+      AppRoutes.HOME: (context) => HomePage(),
       AppRoutes.ADICIONAR_ANUNCIO: (context) => AdicionarAnuncio(),
       AppRoutes.PROFILE: (context) => Profile(),
       AppRoutes.INSTRUCOES_FOTO: (context) => InstrucoesFoto(),

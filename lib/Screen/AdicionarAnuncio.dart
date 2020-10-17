@@ -9,6 +9,7 @@ class AdicionarAnuncio extends StatelessWidget {
         title: Text('Missing Finder'),
       ),
 
+      // BOTTOM BAR COM BOTÃO INVISÍVEL SÓ PRA MANTER A BARRA AZUL EMBAIXO
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue,
         child: Row(
@@ -16,11 +17,7 @@ class AdicionarAnuncio extends StatelessWidget {
           children: <Widget>[
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.search, color: Colors.white),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.person, color: Colors.white),
+              icon: Icon(Icons.search, color: Colors.blue),
             ),
           ],
         ),
@@ -68,9 +65,3 @@ class AdicionarAnuncio extends StatelessWidget {
     );
   }
 }
-//	Widget build(BuildContext context){
-//		return Container (
-//			padding: EdgeInsets.all (25.0),
-//			child: Text ('Adicionar Anuncio', style: TextStyle (fontSize: 36.0)),
-//		);
-//	}

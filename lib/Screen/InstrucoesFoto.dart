@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class InstrucoesFoto extends StatelessWidget {
-  // Future<void> goToHome(BuildContext context) async {
-//    Navigator.of(context).popAndPushNamed(
-//      '/',
-//    );
-//  }
+   Future<void> goToHome(BuildContext context) async {
+    Navigator.of(context).popAndPushNamed(
+      '/home',
+    );
+  }
 
   Future<void> goToTirarFoto(BuildContext context) async {
     Navigator.of(context).pushNamed(
@@ -26,15 +26,15 @@ class InstrucoesFoto extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
-              onPressed: () {}, //=> goToHome(context),
+              onPressed: () => goToHome(context),
               icon: Icon(
                 Icons.home,
-                color: Colors.white,
+                color: Colors.white, size: 30                
               ),
             ),
             IconButton(
               onPressed: () => goToTirarFoto(context),
-              icon: Icon(Icons.arrow_forward_sharp, color: Colors.white),
+              icon: Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 30),
             ),
           ],
         ),

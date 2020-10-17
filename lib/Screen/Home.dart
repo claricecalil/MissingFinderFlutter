@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 //import 'package:missing_finder/routes/app_routes.dart';
 
 class HomePage extends StatelessWidget {
+   Future<void> goToHome(BuildContext context) async {
+    Navigator.of(context).popAndPushNamed(
+      '/home',
+    );
+  }
+
   Future<void> goToInstrucoesFoto(BuildContext context) async {
     Navigator.of(context).pushNamed(
       '/instrucoes_foto',
@@ -42,11 +48,11 @@ class HomePage extends StatelessWidget {
               child: (
                 Image.asset('assets/imagens/katyperry_similaridades.jpg', 
                 width: 500, height: 500,fit: BoxFit.cover)
+                //Image.network("https://robohash.org/$index")
               ),
               onTap: () => goToChecaAnuncio(context),
             ),
-
-            //child: Image.network("https://robohash.org/$index"),
+                        
             // LINK QUE VEM É SIMILAR A ISSO: 
             //child: Image.network('https://mantovanellos-bucket.s3-sa-east-1.amazonaws.com/found/$index'),
                        
@@ -61,19 +67,16 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
+              onPressed: () {}, //=> goToHome(context),
+              icon: Icon(Icons.home, color: Colors.white, size: 30),
             ),
             IconButton(
               onPressed: () => goToInstrucoesFoto(context),
-              icon: Icon(Icons.add_circle_sharp, color: Colors.white),
+              icon: Icon(Icons.add_circle_sharp, color: Colors.white, size: 30),
             ),
             IconButton(
               onPressed: () => goToProfile(context),
-              icon: Icon(Icons.person, color: Colors.white),
+              icon: Icon(Icons.person, color: Colors.white, size: 30),
             ),
           ],
         ),

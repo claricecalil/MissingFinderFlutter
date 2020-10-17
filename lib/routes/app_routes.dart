@@ -1,5 +1,5 @@
 class AppRoutes {
-  //static const HOME = '/';
+  static const HOME = '/home';
   static const ADICIONAR_ANUNCIO = '/add_anuncio';
   static const PROFILE = '/profile';
   static const INSTRUCOES_FOTO = '/instrucoes_foto';
